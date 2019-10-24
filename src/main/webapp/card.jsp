@@ -21,26 +21,26 @@
         <td>
             <form action="/card" method="POST">
                 <input type="submit" value="PREVIOUS"/>
-                <input type="hidden" name="ind" value=${ind-1}/>
+                <input type="hidden" name="ind" value=${ind-1} />
             </form>
         </td>
         <td>
-        <form action="/cardupdate" method="GET">
-            <input type="submit" value="Изменить"/>
-            <input type="hidden" name="id" value=${card.id}/>
-        </form>
+            <form action="/cardupdate" method="GET">
+                <input type="submit" value="Изменить"/>
+                <input type="hidden" name="id" value=${card.id} />
+            </form>
         </td>
         <td>
-        <form action="/carddelete" method="POST">
-            <input type="submit" value="Удалить"/>
-            <input type="hidden" name="id" value=${card.id}/>
-        </form>
+            <form action="/carddelete" method="POST">
+                <input type="submit" value="Удалить"/>
+                <input type="hidden" name="id" value=${card.id} />
+            </form>
         </td>
         <td>
-        <form action="/card" method="POST">
-            <input type="submit" value="NEXT"/>
-            <input type="hidden" name="ind" value=${ind+1}/>
-        </form>
+            <form action="/card" method="POST">
+                <input type="submit" value="NEXT"/>
+                <input type="hidden" name="ind" value=${ind+1} />
+            </form>
         </td>
     </tr>
 </table>

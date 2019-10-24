@@ -20,7 +20,7 @@
     </tr>
     <c:forEach items="${requestScope.list}" var="card">
         <tr>
-            <td>${card.id}</td>
+
             <td style="border: 1px solid black; text-align: left"><a href="/card?id=${card.id}">${card.tema}.${card.title}.</a></td>
         </tr>
     </c:forEach>

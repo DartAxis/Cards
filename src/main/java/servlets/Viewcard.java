@@ -37,13 +37,13 @@ public class Viewcard extends HttpServlet {
         if(ind<=0){
             ind=1L;
         }
-        Long id=null;
+        Long id=0L;
         for(Map.Entry<Long,Long> pair:CardService.indexes.entrySet()){
             if(ind.equals(pair.getValue())){
                 id=pair.getKey();
             }
         }
-        if(id==null){ ind=1L;
+        if(id==0){ ind=1L;
             for(Map.Entry<Long,Long> pair:CardService.indexes.entrySet()){
                 if(ind.equals(pair.getValue())){
                     id=pair.getKey();
