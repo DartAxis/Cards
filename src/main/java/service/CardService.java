@@ -6,12 +6,14 @@ import model.Card;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class CardService {
     private static CardService instance;
     private static CardDao cardDao;
-
+    public static Map<Long, Long> indexes=new HashMap<>();
     private CardService(){
 
     }
@@ -41,7 +43,13 @@ public class CardService {
     }
 
     public List<Card> getAllCard(){
-        return cardDao.getAllCard();
+        List<Card> allcards=cardDao.getAllCard();
+        Long ind=1L;
+        indexes.clear();
+        for(Card card:allcards){
+            indexes.put(card.getId(),ind);
+        }
+        return  allcards;
     }
 
     public List<Card> getCardByTheme(String tema){

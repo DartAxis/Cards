@@ -20,8 +20,13 @@ public class Viewcard extends HttpServlet {
         System.out.println(card.getTema());
         System.out.println(card.getTitle());
         System.out.println(card.getText());
-
+        req.setAttribute("ind",CardService.indexes.get(id));
         req.getRequestDispatcher("card.jsp").forward(req, resp);
 
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        super.doPost(req, resp);
     }
 }
