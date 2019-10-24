@@ -33,7 +33,7 @@ public class DBConn {
     private static Configuration getMySqlConfiguration() {
         Configuration configuration = new Configuration();
         configuration.addAnnotatedClass(Card.class);
-        System.out.println("считываем параметры Hibernate");
+        //System.out.println("считываем параметры Hibernate");
         configuration.setProperty("hibernate.dialect", Config.read("DbDialect"));
         configuration.setProperty("hibernate.connection.driver_class", Config.read("DriverClass"));
         configuration.setProperty("hibernate.connection.url", Config.read("DBURL"));

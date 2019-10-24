@@ -47,7 +47,7 @@ public class CardService {
         Long ind=1L;
         indexes.clear();
         for(Card card:allcards){
-            indexes.put(card.getId(),ind);
+            indexes.put(card.getId(),ind++);
         }
         return  allcards;
     }

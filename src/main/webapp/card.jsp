@@ -14,16 +14,35 @@
 <h1> ${card.tema}. ${card.title}</h1>
 <p>
     <textarea readonly="readonly" rows="20" cols="100">
-    ${card.text}</textarea>
+        ${card.text}</textarea>
 </p>
-<form action="/cardupdate" method="GET">
-    <input type="submit" value="Изменить"/>
-    <input type="hidden" name="id" value=${card.id} />
-</form>
-<form action="/carddelete" method="POST">
-    <input type="submit" value="Удалить"/>
-    <input type="hidden" name="id" value=${card.id} />
-</form>
-
+<table>
+    <tr>
+        <td>
+            <form action="/card" method="POST">
+                <input type="submit" value="PREVIOUS"/>
+                <input type="hidden" name="ind" value=${ind-1}/>
+            </form>
+        </td>
+        <td>
+        <form action="/cardupdate" method="GET">
+            <input type="submit" value="Изменить"/>
+            <input type="hidden" name="id" value=${card.id}/>
+        </form>
+        </td>
+        <td>
+        <form action="/carddelete" method="POST">
+            <input type="submit" value="Удалить"/>
+            <input type="hidden" name="id" value=${card.id}/>
+        </form>
+        </td>
+        <td>
+        <form action="/card" method="POST">
+            <input type="submit" value="NEXT"/>
+            <input type="hidden" name="ind" value=${ind+1}/>
+        </form>
+        </td>
+    </tr>
+</table>
 </body>
 </html>

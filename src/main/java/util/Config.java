@@ -11,12 +11,12 @@ public class Config {
      * @return value Возвращаем значение поля
      */
     public static String read(String key) {
-        System.out.println("Считываем конфиг по ключу - "+key);
+        //System.out.println("Считываем конфиг по ключу - "+key);
 
         if (properties.isEmpty()) {
             try {
                 properties.load(Thread.currentThread().getContextClassLoader().getResourceAsStream("config.properties"));
-                System.out.println(properties.getProperty(key));
+        //        System.out.println(properties.getProperty(key));
                 return properties.getProperty(key);
 
             } catch (IOException e) {
