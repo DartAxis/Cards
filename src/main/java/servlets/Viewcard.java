@@ -20,10 +20,6 @@ public class Viewcard extends HttpServlet {
         Long id=Long.parseLong(req.getParameter("id"));
         Card card=cardService.getCardById(id);
         req.setAttribute("card",card);
-        System.out.println(card.getTema());
-        System.out.println(card.getTitle());
-        System.out.println(card.getText());
-        req.setAttribute("ind",CardService.indexes.get(id));
         Long ind=CardService.indexes.get(id);
         req.setAttribute("ind",ind);
         req.getRequestDispatcher("card.jsp").forward(req, resp);
