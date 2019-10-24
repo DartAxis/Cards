@@ -27,6 +27,16 @@ public class Viewcard extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doPost(req, resp);
+        Long ind=Long.parseLong(req.getParameter("ind"));
+        /*
+        Set<Map.Entry<String,Object>> entrySet=map.entrySet();
+
+Object desiredObject=new Object();//что хотим найти
+for (Map.Entry<String,Object> pair : entrySet) {
+    if (desiredObject.equals(pair.getValue())) {
+        return pair.getKey();// нашли наше значение и возвращаем  ключ
+    }
+}
+         */
     }
 }
